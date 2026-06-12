@@ -88,3 +88,36 @@ Giao diện ban đầu sẽ hiển thị chế độ Designer cho Screen1 gồm 
 
 #### Điền thông tin giới thiệu bản thân (About me)
 - Tạo Label họ tên
+- Tạo Label Mssv
+- Tạo Label tên Lớp học
+  
+<img width="960" height="446" alt="image" src="https://github.com/user-attachments/assets/f6c321c5-cf93-4a12-adc2-ec7d396ff4dc" />
+
+#### Thêm Button sang screen2 ( giải toán ) và screen3 ( Viewer 1 trang web có sẵn )
+- Kéo Button vào màn hình -> Đặt tên -> chọn phông chữ
+  
+<img width="960" height="445" alt="image" src="https://github.com/user-attachments/assets/a4464b0b-dc15-4c60-b33b-69a418c1cfec" />
+
+### 4. Tạo các màn hình đích Screen2, screen3
+- Click vào dấu + để thêm màn hình mới -> Đặt tên cho screen -> OK
+-> Kết quả là sẽ có 3 màn hình.
+
+<img width="960" height="447" alt="image" src="https://github.com/user-attachments/assets/47e43cc0-618f-435b-9a10-873790150366" />
+
+
+#### Thiết kế và cấu hình Screen2 - Giải toán
+
+Screen2 được sử dụng để xây dựng chức năng giải bài toán đơn giản trtên thiết bị di động. Trong bài này, bài toán được chọn là tính chỉ số BMI dựa vào cân nặng và chiều cao người dùng
+- Tương tự thực hiện các bước cơ bản như ở Screen1
+
+<img width="960" height="449" alt="image" src="https://github.com/user-attachments/assets/8f6ee4e4-8663-46ab-ac16-ef74f9b75054" />
+
+- Kéo HozizontalArrangement vào trong VA_BMI, HozizontalArrangemen là khung chứa (container) dùng để sắp xếp các thành phần giao diện theo chiều ngang từ trái qua phải.
+- Label: Cân nặng (Kg)
+- Label: Chiều cao (Cm)
+- TextBox tích chọn NumbersOnly: Chỉ cho phép nhập số
+  
+<img width="957" height="451" alt="image" src="https://github.com/user-attachments/assets/ac8ac8ef-d247-43f7-aa2a-ced8dcae8e1b" />
+
+- Nút tính toán:  
+
