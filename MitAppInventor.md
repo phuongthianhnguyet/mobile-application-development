@@ -1,4 +1,4 @@
-<img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/70f62ad4-1473-419e-8275-04675636dc25" /># BÀI TẬP MÔN : PHÁT TRIỂN ỨNG DỤNG TRÊN THIẾT BỊ DI ĐỘNG
+# BÀI TẬP MÔN : PHÁT TRIỂN ỨNG DỤNG TRÊN THIẾT BỊ DI ĐỘNG
 # YÊU CẦU:
 1. Viết phần mềm trên công cụ Mit App inventor
    (tập trung vào quy trình tạo ra phần mềm)
@@ -119,5 +119,87 @@ Screen2 được sử dụng để xây dựng chức năng giải bài toán đ
   
 <img width="957" height="451" alt="image" src="https://github.com/user-attachments/assets/ac8ac8ef-d247-43f7-aa2a-ced8dcae8e1b" />
 
-- Nút tính toán:  
+- Nút tính toán:
+   
+<img width="957" height="451" alt="image" src="https://github.com/user-attachments/assets/cd3693fe-883a-40e7-9fa9-b81b082ea014" />
 
+- label: Hiển thị kết quả tính BMI
+- Label: phân loại
+
+<img width="960" height="444" alt="image" src="https://github.com/user-attachments/assets/0c6d1f2f-dea3-42dc-b8b7-1209de748c3f" />
+
+#### Lập trình logic cho Screen 2 (Tính BMI)
+
+Tại màn hình Screen2 chọn Block
+
+##### Bước 1. Sự kiện Click
+- Chọn btnCaculate trong Screen2 -> Kéo when btnCaculate ra màn hình
+
+<img width="960" height="445" alt="image" src="https://github.com/user-attachments/assets/3084255e-e2b2-4bdd-b435-38cb6df35614" />
+
+##### Bước 2. Hiển thị kết quả
+
+- Kết quả tính xong sẽ là label tên IblResult
+- Chọn IblResult -> kéo khối màu xanh đậm có chữ set IblResult.Text to ra màn hình và lắp bên trong khối when btnCaculate.click do
+
+<img width="960" height="480" alt="image" src="https://github.com/user-attachments/assets/9b4ec983-1d87-44b1-a7cf-2aa598234336" />
+
+##### Bước 3. Lắp ráp công thức toán học và logic:
+
+Công thức tính BMI là: Cân nặng / (Chiều cao x Chiều cao).
+
+- Kéo lên trên cùng cột bên trái, bấm vào nhóm Math (màu xanh dương).
+
+- Tìm khối có dấu chia /, kéo nó gắn vào cái đuôi còn trống của khối set IblResult.Text to.
+
+<img width="960" height="449" alt="image" src="https://github.com/user-attachments/assets/a8fda6a6-f0a5-41b6-bf6d-519de3742e86" />
+
+- Click vào chữ TextWeight ở cột bên trái -> Chọn khối TextBox1.Text -> Kéo ra và gắn vào ô trống bên trái dấu / của phép chia.
+
+<img width="960" height="443" alt="image" src="https://github.com/user-attachments/assets/033e01dc-841d-4022-acba-c46d5c2d06b3" />
+
+- Vào lại nhóm Math lấy khối nhân x và gắn vào ô trống thứ hai bên phải dấu chia / để tạo phép nhân mẫu số
+
+<img width="959" height="433" alt="image" src="https://github.com/user-attachments/assets/d3562d09-4789-433e-afa2-f86793937b1c" />
+
+- Chiều cao x Chiều cao:
+Nhấn vào chữ TextBox2 ở cột bên trái, tìm khối TextBox2.Text -> Kéo vào ô trống đầu tiên của khối x. Tiếp tục lấy thêm một khối TextBox2.Text nữa gắn vào ô trống thứ hai của khối nhấn x.
+
+<img width="960" height="441" alt="image" src="https://github.com/user-attachments/assets/6000c52a-7adc-4a4a-9e40-590aac37ed99" />
+
+##### Tạo biến toàn cục để lưu giá trị BMI
+
+- Tìm nhóm Variables, kéo khối initialize global name to (màu cam) ra màn hình -> Nhấn vào chữ name và đổi tên thành BMI_Value. Vào nhóm Math kéo hối số 0 ghép vào đuôi khối màu cam này. Ý nghĩa của phần này là khởi tạo một biến tên là BMI_Value với giá trị ban đầu bằng 0.
+
+<img width="958" height="441" alt="image" src="https://github.com/user-attachments/assets/4a88ffbb-d13d-459b-9952-a030e111e740" />
+
+- Vào nhóm Variables, kéo khối set to ra màn hình sau đó click vào mũi tên xuống giữa set và to chọn global BMI_Value
+
+<img width="959" height="440" alt="image" src="https://github.com/user-attachments/assets/5bd22ea5-71ca-4dd1-a1ab-c29c63a81afa" />
+
+##### Gán công thức toán học vào biến.
+Vào nhóm Variables, kéo khối set global BMI_Value to thả vào ngay dòng đầu tiên bên trong lòng khối màu nâu Click.
+
+Kéo cả cụm phép tính toán học (phép chia và phép nhân chiều cao, cân nặng) đang gắn ở chữ set IblResult.Text to-> Chuyển nó sang gắn vào đuôi của khối set global BMI_Value to.
+
+Tiếp theo, dòng set IblResult.Text to lúc này đang bị trống phần đuôi. Vào Variables, lấy khối get global BMI_Value gắn vào chỗ trống đó. (Ý nghĩa: Khi bấm nút -> Tính toán công thức và cất vào biến BMI_Value -> Sau đó lấy biến BMI_Value in ra màn hình ở dòng IblResult).
+
+<img width="959" height="482" alt="image" src="https://github.com/user-attachments/assets/40ad4f8d-08fc-4fc9-af36-b542e99d263f" />
+
+##### Lập trình Logic Phân loại (If - Else)
+Theo tiêu chuẩn của WHO: Dưới 18.5 là Gầy; Dưới 25 là Bình thường; Dưới 30 là Thừa cân; Còn lại là Béo phì.
+
+- Vào nhóm Control (màu cam nhạt), kéo khối if then thả vào ngay dưới khối set IbIResult.Text to
+
+- Mở rộng if-Else: Bấm vào hình bánh răng màu xanh dương nhỏ xíu trên khối if đó. Một hộp nhỏ hiện ra.
+
+- Kéo 2 cái khối else if và 1 khối else ở bên trái, thả vào lồng bên dưới chữ if ở bên phải. Xong thì bấm lại hình bánh răng để đóng hộp. Lúc này khối lệnh đã có 4 nhánh.
+
+<img width="960" height="434" alt="image" src="https://github.com/user-attachments/assets/61ce721f-0db7-4a3b-8fd5-1fa551e581d1" />
+
+<img width="960" height="472" alt="image" src="https://github.com/user-attachments/assets/ff9eefd9-ed65-4e3c-b49b-0d9f246963ab" />
+
+##### Thiết kế và lập trình Screen3 (WebView - Xem Website)
+
+- Tại giao diện thiết kế Screen3. Tại cột Palette bên trái màn hình chọn mục User Interface
+- Giữ chuột WebViewer kéo vào màn hình điện thoại.
