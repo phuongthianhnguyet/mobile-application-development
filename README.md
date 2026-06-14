@@ -20,4 +20,13 @@ Minimum SDK: API 24
 Nhấn Finish
 
 ### Bước 2. Tạo thư mục Assets và file dữ liệu JSOn địa điểm
-#### Tạo thư mục 
+#### Tạo thư mục Assets 
+Mặc định dự án mới sẽ không có thư mục này vì vậy ta phải tạo nó. Tại cột danh sách thư mục bên trái:
+- Chọn App -> New -> Directory -> Assets Folder ->. Sau khi nhấn Finish dưới thư mục mainsẽ xuất hiện 1 thư mục tên là Assets
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/7b19d686-6df3-42b3-8071-8c772757772a" />
+
+<img width="325" height="281" alt="image" src="https://github.com/user-attachments/assets/ff9e8d9a-54e2-4cd0-b717-81ea06b9b5c6" />
+
+
+
