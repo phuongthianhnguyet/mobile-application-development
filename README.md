@@ -199,7 +199,62 @@ Bấm vào nút tam giác màu xanh lá cây (Run app) hoặc nhấn tổ hợp 
 
 ## III. TẠO APP2
 ### Bước 1. Tạo project mới
+#### Cấp quyền Internet trong AndroidManifest.xml
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+```
+android:usesCleartextTraffic="true"
+```
+<img width="960" height="511" alt="image" src="https://github.com/user-attachments/assets/09df6e40-97d9-4446-8a10-108b4184b763" />
 
+### Bước 2. Tạo các màn hình (Activity2,3)
+#### Tạo màn hình giải toán (MathActivity)
+- Nhìn sang cây thư mục bên trái màn hình, bạn tìm đến thư mục java.Bấm mở rộng thư mục java ra, bạn sẽ thấy một thư mục con chứa file MainActivity (thường tên là com.example.baitap2_app2).Click chuột phải vào thư mục con com.example.baitap2_app2 đó.Chọn New $\rightarrow$ Activity $\rightarrow$ Chọn chính xác mục Empty Views Activity (Nhớ là phải có chữ Views nha).Một bảng cấu hình hiện ra, tại ô Activity Name, bạn xóa chữ mặc định đi và gõ vào: MathActivity.Các ô còn lại giữ nguyên $\rightarrow$ Bấm nút Finish ở góc dưới.
 
+<img width="960" height="512" alt="image" src="https://github.com/user-attachments/assets/5eb385dd-1868-4796-bbdd-901115d49eb0" />
 
+#### Tạo màn hình trang web (WebActivity)
+- Tiếp tục click chuột phải vào thư mục con com.example.baitap2_app2 đó một lần nữa.
+- Chọn New -> Activity -> Chọn Empty Views Activity.
+- Tại ô Activity Name, gõ vào: WebActivity -> Bấm nút Finish.
 
+<img width="960" height="506" alt="image" src="https://github.com/user-attachments/assets/2e7d0080-0a0c-4c37-9921-004f98b8306a" />
+
+### Bước 3. Thay đổi giao diện (activity_main.xml)
+- Nhìn cây thư mục bên trái, tìm thư mục res -> layout -> kích đúp chuột mở file activity_main.xml.
+- Chuyển chế độ xem sang dạng Code (nút bấm ở góc trên bên phải màn hình)
+
+<img width="960" height="517" alt="image" src="https://github.com/user-attachments/assets/fef4edd3-4820-4dd0-9fdb-99ab2c03e632" />
+
+#### Viết code điều hướng (MainActivity.java)
+- Tìm và mở file MainActivity.java trong thư mục java com.example.baitap2_app2.
+- Xóa sạch code cũ đi và dán đoạn code điều hướng này vào (Lưu ý: Giữ lại dòng package com.example.baitap2_app2; ở trên cùng nếu gói của bạn khác nhé):
+
+<img width="960" height="509" alt="image" src="https://github.com/user-attachments/assets/fba28652-252d-4bdd-8e3f-114141004815" />
+
+### Bước 4> Thiết kế giao diện và code giải toán + gửi đi (MathActivity).
+- Bạn nhìn sang cây thư mục bên trái, tìm mở file activity_math.xml (nằm trong mục res -> layout).
+- Chuyển sang chế độ xem dạng Code ở góc trên bên phải.Xóa toàn bộ mã mặc định đi và dán đoạn code giao diện này vào:
+
+<img width="955" height="508" alt="image" src="https://github.com/user-attachments/assets/e05dfb06-e50b-427d-966a-6ff4982ecf1f" />
+
+#### Viết code xử lý toán và gọi API (MathActivity.java)
+
+- Tìm mở file MathActivity.java trong thư mục code Java của bạn.
+
+<img width="960" height="510" alt="image" src="https://github.com/user-attachments/assets/e5597b1d-f0c7-44e0-8fb2-2c6fba64688f" />
+
+### Bước 5. Thiết kế giao diện WebView
+
+- Tìm mở file activity_web.xml ở cây thư mục bên trái (res -> layout).
+- Chuyển sang chế độ xem dạng Code ở góc trên bên phải.
+
+<img width="960" height="508" alt="image" src="https://github.com/user-attachments/assets/fe3003c9-8999-4dfd-883d-ef3eafb4ac4a" />
+
+#### Viết code gọi link URL chính chủ (WebActivity.java)
+
+- Mở file WebActivity.java trong thư mục code Java của bạn lên.
+
+<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/ea521d94-14ca-4449-8de2-633e3629efd3" />
