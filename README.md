@@ -246,7 +246,7 @@ android:usesCleartextTraffic="true"
 
 <img width="960" height="510" alt="image" src="https://github.com/user-attachments/assets/e5597b1d-f0c7-44e0-8fb2-2c6fba64688f" />
 
-### Bước 5. Thiết kế giao diện WebView
+### Bước 5. Thiết kế giao diện WebView (activity_web.xml) để truy cập trang web  https://k58kmt.tdh.io.vn?
 
 - Tìm mở file activity_web.xml ở cây thư mục bên trái (res -> layout).
 - Chuyển sang chế độ xem dạng Code ở góc trên bên phải.
@@ -258,3 +258,9 @@ android:usesCleartextTraffic="true"
 - Mở file WebActivity.java trong thư mục code Java của bạn lên.
 
 <img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/ea521d94-14ca-4449-8de2-633e3629efd3" />
+
+### Kết quả 
+<img width="482" height="469" alt="image" src="https://github.com/user-attachments/assets/de165b9f-3a0e-4f54-8e80-26c50b0b38eb" />
+
+<img width="960" height="501" alt="image" src="https://github.com/user-attachments/assets/2af2d1c8-4491-4498-8d45-85c126dedf3d" />
+
